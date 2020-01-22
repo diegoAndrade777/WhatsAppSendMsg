@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+<!--
+  Phone example: 5547000000000
+  Put the phone number after send?phone=
+-->
+<div class="input-container">
+    <input id="input-message" class="input" type="text" pattern=".+" required onblur="messageReturn();"/>
+    <label class="label" for="name">Message</label>
+</div>
+
+<a id="a-message" class="btn-whats pulse" href="">
+  <i class="fa fa-whatsapp" onclick=""></i>
+</a>
+
+<script type="text/javascript">
+  function messageReturn(){
+    var message;
+
+    message = document.getElementById('input-message').value;
+
+    message = document.getElementById( "a-message" ).href = 'https://wa.me/5547000000000?text=' + message;
+  };
+</script>

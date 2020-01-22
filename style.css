@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.btn-whats{
+  background-color: #25D366;
+  color: white;
+  width: 18px;
+  height: 18px;
+  text-decoration: none;
+  border-radius: 800px;
+  padding: 20px;
+  top: 85%;
+  left: 90%;
+  position: fixed;
+  transition: all .6s;
+  animation: 2s btn-whats;
+  animation-fill-mode: both;
+  animation-iterative-count: 1;
+  z-index: 1;
+}.btn-whats:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.pulse{
+  animation: pulse 2s infinite;
+}
+
+.btn-whats > i{
+  position: relative;
+  font-size: 2.4rem;
+  margin: -12px -7px;
+}
+
+.input-text {
+  position: fixed;
+  top: 87%;
+  right: 10%;
+  height: 10px;
+  text-decoration: wavy;
+  border-radius: 800px;
+  padding: 20px;
+  
+}
+
+@media only screen and (min-width: 900px){
+  .btn-whats{
+    left: 92%;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .btn-whats{
+    left: 85%;
+  }
+  h1{
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .btn-whats{
+    left: 80%;
+  }
+  
+}
+
+@media only screen and (max-width: 350px){
+  .btn-whats{
+    left: 75%;
+  }
+}
+
+@keyframes btn-whats{
+  10%{
+    transform: translate(0, 200px); 
+  }
+  50%{
+    transform: translate(0, -40px);
+  }
+  
+  70%{
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  50%{
+    transform: scale(1.1);
+  }
+}
+
+.input-container {
+
+  position: fixed;
+  top: 83%;
+  right: 10%;
+  height: 10px;
+  text-decoration: wavy;
+  border-radius: 800px;
+  padding: 20px;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid #9e9e9e;
+  outline: none;
+  transition: .2s ease-in-out;
+  box-sizing: border-box;
+}
+
+label {
+  top: 0;
+  left: 0; right: 0;
+  color: #616161;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  cursor: text;
+  transition: .2s ease-in-out;
+  box-sizing: border-box;
+}
+
+input,
+label {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* Interation */
+input:valid,
+input:focus {
+  border-bottom: 2px solid #26a69a;  
+}
+
+input:valid + label,
+input:focus + label {
+  color: #26a69a;
+  font-size: .8rem;
+  top: -30px;
+  pointer-events: none;
+}
+
+* {
+    font-family: sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: transparent;
+}
+h1 {
+    color: #616161;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    margin: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+    background-color: #FFF;
+}
